@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K64UartDemo", "K64UartDemo\K64UartDemo.csproj", "{2084E1D9-86B1-4731-9120-9851B1277AFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2084E1D9-86B1-4731-9120-9851B1277AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2084E1D9-86B1-4731-9120-9851B1277AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2084E1D9-86B1-4731-9120-9851B1277AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2084E1D9-86B1-4731-9120-9851B1277AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {627B3FA7-C244-43A5-8CE7-5D44156A3942}
+	EndGlobalSection
+EndGlobal

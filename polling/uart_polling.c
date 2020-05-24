@@ -160,12 +160,8 @@ int main(void)
 	UART_WriteC3(COMM_UART, C3);
 
 
-    msg.header.UartPrefix = 0x1415;
-    msg.header.opcode = 0x1235;
-
     UART_FlushFifo(COMM_UART);
-    UART_WriteBlocking(COMM_UART, (uint8_t *)&msg, sizeof(msg));
-    UART_WriteBlocking(COMM_UART, (uint8_t *)&msg, sizeof(msg));
+
 
     //UART_WriteBlocking(COMM_UART, (uint8_t *)&msg, sizeof(msg));
 
@@ -173,16 +169,18 @@ int main(void)
     while (1)
     {
         UART_ReadBlocking(COMM_UART, (uint8_t *)&msg, sizeof(msg));
-#if 1
         PRINTF("UartPrefix 0x%x\n" , msg.header.UartPrefix);
-        //PRINTF("msgSize 0x%x\n" , msg.header.msgSize);
         PRINTF("opcode 0x%x\n" , msg.header.opcode);
+        msg.header.UartPrefix = 0x1415;
+        msg.header.opcode = 0x1235;
+        UART_WriteBlocking(COMM_UART, (uint8_t *)&msg, sizeof(msg));
+
 
         //PRINTF("data 0x%x\n" , msg.data);
         //PRINTF("value1 0x%x\n" , msg.value);
         //PRINTF("value1 0x%x\n" , msg.value1);
         //PRINTF("crc 0x%x\n" , msg.crc);
         //UART_WriteBlocking(DEMO_UART, &ch, 1);
-#endif
+
     }
 }

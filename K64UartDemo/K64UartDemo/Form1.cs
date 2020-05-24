@@ -34,7 +34,7 @@ namespace K64UartDemo
             //public ushort crc;
         }
         Thread m_thread;
-        int m_firstByte = 1;
+        int m_firstByte = 0;
         Fifo m_fifo;
         public Form1()
         {
